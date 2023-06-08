@@ -23,7 +23,7 @@ public class RelatorioContas {
 
 		System.out.println("-".repeat(141));
 		
-		System.out.printf("Saldo do movimento: %13.2f\n", this.totalizarMovimento(contas));
+		System.out.printf("Saldo (diferença entre contas a receber - contas a pagar: %13.2f\n", this.totalizarMovimento(contas));
 	}
 	
 	public double totalizarMovimento(Conta[] contas) {
