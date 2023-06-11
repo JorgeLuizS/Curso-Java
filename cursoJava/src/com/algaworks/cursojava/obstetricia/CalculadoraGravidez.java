@@ -8,6 +8,7 @@ public class CalculadoraGravidez {
 	
 	private Date dataUltimoPeriodoMenstrual;
 
+
 	public CalculadoraGravidez(Date dataUltimoPeriodoMenstrual) {
 		this.dataUltimoPeriodoMenstrual = dataUltimoPeriodoMenstrual;
 	}
@@ -22,11 +23,11 @@ public class CalculadoraGravidez {
 		// implementar cálculo de data estimada da concepção
 		// 2 semanas após a data do último período menstrual
 		
-		Calendar dtMenstuacao = converterDateParaCalendar(dataUltimoPeriodoMenstrual);
+		Calendar calendar = converterDateParaCalendar(dataUltimoPeriodoMenstrual);
 		
-		dtMenstuacao.add(Calendar.WEEK_OF_YEAR, 2);
+		calendar.add(Calendar.WEEK_OF_YEAR, 2);
 		
-		return dtMenstuacao.getTime();
+		return calendar.getTime();
 	}
 	
 	
@@ -40,19 +41,6 @@ public class CalculadoraGravidez {
 		
 		return dtMenstuacao.getTime();
 	}
-
-	
-	
-	
-	public Date getDataUltimoPeriodoMenstrual() {
-		return dataUltimoPeriodoMenstrual;
-	}
-
-	public void setDataUltimoPeriodoMenstrual(Date dataUltimoPeriodoMenstrual) {
-		this.dataUltimoPeriodoMenstrual = dataUltimoPeriodoMenstrual;
-	}
-	
-	
 	
 	
 
